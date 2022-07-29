@@ -1,0 +1,48 @@
+Proceso CategorizacionPersonas
+	Definir numerodepersonas,edad Como Entero
+	Definir nombres,apellido,genero Como Caracter
+	Escribir 'Ingrese el numero de personas existentes'
+	Leer numerodepersonas
+	Para i<-1 Hasta numerodepersonas Hacer
+		Escribir ' Datos Personales'
+		Escribir 'Ingrese el nombre de la persona '
+		Leer nombre
+		Escribir 'Ingrese apellido de la persona '
+		Leer apellido
+		Escribir 'Ingrese la edad de la persona '
+		Leer edad
+		Escribir 'Ingrese el genero (masculino/femenino) de la persona'
+		Leer genero
+		Si edad>0 Y edad<13 Y genero='masculino' Entonces
+			Escribir 'La persona ',i,' es un niño de edad: ',edad,' años'
+		SiNo
+			Si edad>0 Y edad<13 Y genero='femenino' Entonces
+				Escribir 'La persona ',i,' es un niña de edad: ',edad,' años'
+			SiNo
+				Si edad>=13 Y edad<=20 Y genero='masculino' Entonces
+					Escribir 'La persona ',i,' es un joven adolescente de edad: ',edad,' años'
+				SiNo
+					Si edad>=13 Y edad<=20 Y genero='femenino' Entonces
+						Escribir 'La persona ',i,' es una joven adolescente de edad: ',edad,' años'
+					SiNo
+						Si edad>20 Y edad<=65 Y genero='masculino' Entonces
+							Escribir 'La persona ',i,' es un adulto de edad: ',edad,' años'
+						SiNo
+							Si edad>20 Y edad<=65 Y genero='femenino' Entonces
+								Escribir 'La persona ',i,' es una adulta de edad: ',edad,' años'
+							SiNo
+								Si edad>65 Y genero='masculino' Entonces
+									Escribir 'La persona ',i,' es un anciano de edad: ',edad,' años'
+								SiNo
+									Si edad>65 Y genero='femenino' Entonces
+										Escribir 'La persona ',i,' es una anciana de edad: ',edad,' años'
+									FinSi
+								FinSi
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinPara
+FinProceso
